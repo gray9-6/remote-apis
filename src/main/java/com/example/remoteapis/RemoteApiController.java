@@ -45,4 +45,19 @@ public class RemoteApiController {
         return  responseObject;
     }
 
+
+    // calling the api which is in our another application which is running at local host
+    // i.e remote-apis-from-our-own-Application and in that i am calling the football madrid api
+    // https :- used when we are accessing internet url ,, to make communication secure
+    // http :- used when we are accessing from local lost ,, there is no security issue
+
+    // so when we are calling the api form our another application ,, it is necessary that
+    // that application should also be running then only we will be able to call the api fro that application
+    @GetMapping("/football_details")
+    public String getFootBallDetails(){
+        String  url = "http://localhost:9999/football/madrid";
+        String responseObject =  restTemplate.getForObject(url, String.class);
+        return  responseObject;
+    }
+
 }
