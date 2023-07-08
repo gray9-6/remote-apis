@@ -34,7 +34,6 @@ public class RemoteApiController {
         return  responseObject;
     }
 
-
     // when we want only things which we have defined in our Model class
     @GetMapping("/get_custom_details")
     public MovieResponse_ModelClass getCustomMovieDetails(){
