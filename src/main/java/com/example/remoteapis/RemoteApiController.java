@@ -59,5 +59,4 @@ public class RemoteApiController {
         String responseObject =  restTemplate.getForObject(url, String.class);
         return  responseObject;
     }
-
 }
